@@ -1,0 +1,39 @@
+.recipeContainer {
+    padding: 20px;
+    margin: 15px 0;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    color: forestgreen;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+    cursor: default;
+}
+
+.title:hover {
+    color: darkgreen;
+}
+
+.tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background-color: lightgreen;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+    cursor: default;
+}
+
+.tag:hover {
+    background-color: olive;
+}
+

@@ -1,0 +1,58 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    align-items: center;
+}
+
+.title {
+    font-size: 2em;
+    color: black;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.email, .phone, .address, .gender, .university, .company, .companyDetails {
+    font-size: 1em;
+    color: gray;
+    margin-bottom: 5px;
+}
+
+.email {
+    color: deepskyblue;
+}
+
+.phone {
+    color: lawngreen;
+}
+
+.address {
+    color: lightskyblue;
+}
+
+.gender {
+    color: yellowgreen;
+}
+
+.university {
+    color: blueviolet;
+}
+
+.company {
+    color: olive;
+}
+
+.companyDetails {
+    color: coral;
+}
