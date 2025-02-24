@@ -1,6 +1,7 @@
-import { IRecipe } from "@/models/IRecipe";
-import { FC } from "react";
+import {IRecipe} from "@/models/IRecipe";
+import {FC} from "react";
 import styles from '@/styles/Recipe.module.css';
+import Link from "next/link";
 
 interface RecipeComponentProps {
     item: IRecipe;
@@ -9,7 +10,9 @@ interface RecipeComponentProps {
 const RecipeComponent: FC<RecipeComponentProps> = ({ item }) => {
     return (
         <div className={styles.recipeContainer}>
-            <h2 className={styles.title}>{item.name}</h2>
+            <Link href={`/recipes/${item.id}`}>
+                <h2 className={styles.title}>{item.name}</h2>
+            </Link>
             <div className={styles.tags}>
                 {item.tags.map((tag) => (
                     <span key={tag} className={styles.tag}>{tag}</span>
@@ -20,6 +23,9 @@ const RecipeComponent: FC<RecipeComponentProps> = ({ item }) => {
 };
 
 export default RecipeComponent;
+
+
+
 
 
 

@@ -1,21 +1,16 @@
 import {IRecipe} from '@/models/IRecipe';
 import Link from 'next/link';
-import styles from '@/styles/RecipeDetailPage.module.css';
+import styles from '@/styles/RecipePage.module.css';
 
 
 async function fetchRecipe(id: string): Promise<IRecipe> {
     const res = await fetch(`https://dummyjson.com/recipes/${id}`);
-    if (!res.ok) {
-        throw new Error(`Не вдалося завантажити рецепт: ${res.status}`);
-    }
-    return res.json();
+    const recipe = await res.json();
+    return recipe;
 }
 
-const RecipeDetailPage = async ({ params }: { params: { id: string } }) => {
-    const awaitedParams = await params;
-    const { id } = awaitedParams;
-
-    try {
+const RecipePage = async ({params}: {params: {id: string}}) => {
+        const {id} = await params;
         const recipe = await fetchRecipe(id);
 
         return (
@@ -40,25 +35,9 @@ const RecipeDetailPage = async ({ params }: { params: { id: string } }) => {
                 </Link>
             </div>
         );
-    } catch (error) {
-        const errorMessage = (error as Error).message;
-
-        return (
-            <div className={styles.container}>
-                <h1>Помилка завантаження рецепта</h1>
-                <p>{errorMessage}</p>
-            </div>
-        );
-    }
 };
 
-export default RecipeDetailPage;
-
-
-
-
-
-
+export default RecipePage;
 
 
 

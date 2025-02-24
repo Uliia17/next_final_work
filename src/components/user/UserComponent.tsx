@@ -8,10 +8,6 @@ interface UserComponentProps {
 }
 
 const UserComponent: FC<UserComponentProps> = ({item}) => {
-    if (!item || !item.id) {
-        return <div className={styles.errorMessage}>Дані про користувача недоступні</div>;
-    }
-
     return (
         <div className={styles.userContainer}>
             <Link href={`/users/${item.id}`}>

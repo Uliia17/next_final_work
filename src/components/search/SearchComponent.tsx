@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
-import styles from "@/styles/SearchComponent.module.css"; // Підключаємо стилі
+import styles from "@/styles/SearchComponent.module.css";
 
 export default function SearchComponent({ basePath, search }: { basePath: string; search?: string }) {
     const router = useRouter();
