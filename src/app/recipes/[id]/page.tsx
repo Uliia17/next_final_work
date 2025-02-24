@@ -24,11 +24,9 @@ const RecipePage = async ({params}: {params: {id: string}}) => {
                 {recipe.image && <img src={recipe.image} alt={recipe.name} className={styles.image} />}
 
                 <div>
-                    {recipe.tags.map((tag) => (
-                        <Link key={tag} href={`/recipes?tag=${tag}`}>
-                            <span className={styles.tag}>{tag}</span>
-                        </Link>
-                    ))}
+                      {recipe.tags.map((tag) => (
+                       <span key={tag} className={styles.tag}>{tag}</span>
+                       ))}
                 </div>
                 <Link href={`/users/${recipe.userId}`} className={styles.author}>
                     <p>Автор: {recipe.userId}</p>
@@ -38,6 +36,15 @@ const RecipePage = async ({params}: {params: {id: string}}) => {
 };
 
 export default RecipePage;
+
+
+
+
+
+
+
+
+
 
 
 

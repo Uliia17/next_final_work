@@ -1,5 +1,5 @@
-import {IRecipe} from "@/models/IRecipe";
-import {FC} from "react";
+import { IRecipe } from "@/models/IRecipe";
+import { FC } from "react";
 import styles from '@/styles/Recipe.module.css';
 import Link from "next/link";
 
@@ -15,7 +15,9 @@ const RecipeComponent: FC<RecipeComponentProps> = ({ item }) => {
             </Link>
             <div className={styles.tags}>
                 {item.tags.map((tag) => (
-                    <span key={tag} className={styles.tag}>{tag}</span>
+                    <Link key={tag} href={`/recipes?tag=${tag}`} passHref>
+                        <span className={styles.tag}>{tag}</span>
+                    </Link>
                 ))}
             </div>
         </div>
