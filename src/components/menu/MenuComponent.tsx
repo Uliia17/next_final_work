@@ -61,7 +61,7 @@ export default function MenuComponent({user, isAuthenticated}: MenuProps) {
                     </form>
                 </>
             ) : (
-                <Link href="/login" className={styles.link}>Увійти</Link>
+                <Link href="/login" className={styles.link}>Авторизація</Link>
             )}
         </nav>
     );
